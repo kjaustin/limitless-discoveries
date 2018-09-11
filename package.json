@@ -1,0 +1,26 @@
+{
+  "name": "limitless",
+  "version": "1.0.0",
+  "description": "inspire limitless discoveries",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack --config prod.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Katharina Austin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "dns": "^0.2.2",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "ipware": "^1.0.0",
+    "jquery": "^3.3.1",
+    "mongodb": "^3.1.1",
+    "mongojs": "^2.6.0",
+    "path": "^0.12.7",
+    "request": "^2.87.0"
+  }
+}

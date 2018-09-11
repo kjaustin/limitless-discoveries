@@ -1,0 +1,381 @@
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Parallax Scroll
+   ========================================================================== */
+body, html {
+	height: 100%;
+	min-height: 100%;
+}
+.no-js {
+	padding-top: 106px;
+}
+h2 {
+	margin-top: 0;
+}
+.loading {
+	background: url('../img/ico_loading.gif') no-repeat center center;
+}
+section {
+	min-width: 960px;
+	opacity: 0;
+}
+.loaded section,
+.no-js section {
+	opacity: 1;
+	-webkit-transition: opacity 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out;
+	transition: opacity 300ms ease-out;
+}
+main {
+	overflow-x: hidden;
+}
+#preload {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.bcg {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+.bcg-small {
+    height: 40% !important;
+}
+
+.hsContainer {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+    position: relative;
+}
+
+.hsContent {
+	max-width: 700px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+	.hsContent h2  {
+		color: #ffffff;
+		font-size: 30px;
+		line-height: 38px;
+	}
+	.hsContent p {
+		width: 400px;
+		color: #b2b2b2;
+	}
+	.hsContent a {
+		color: #b2b2b2;
+		text-decoration: underline;
+	}
+
+.header-content {
+    margin: auto;
+}
+
+#slide-1-home .bcg {background-image:url('../img/bcg_slide-2-home.jpg');}
+#slide-1-literacy .bcg {background-image:url('../img/bcg_slide-1-literacy.jpg');}
+#slide-1-logic .bcg {background-image:url('../img/bcg_slide-1-logic.jpg');}
+#slide-1-art .bcg {background-image:url('../img/bcg_slide-1-art.jpeg');}
+#slide-1-science .bcg {background-image:url('../img/bcg_slide-1-science.jpg');}
+#slide-1-math .bcg {background-image:url('../img/bcg_slide-1-math.jpg');}
+#slide-1-grossMotor .bcg {background-image:url('../img/bcg_slide-1-grossMotor.jpg');}
+#slide-1-connect .bcg {background-image:url('../img/bcg_slide-1-connect.jpg');}
+#slide-1-engage .bcg {background-image:url('../img/bcg_slide-1-engage.jpg');}
+#slide-1-unitStudy .bcg {background-image:url('../img/bcg_slide-1-unitStudy.jpg');}
+#slide-1-montessori .bcg {background-image:url('../img/bcg_slide-1-montessori.jpg');}
+#slide-1-traditionalTextbook .bcg {background-image:url('../img/bcg_slide-1-traditionalTextbook.jpg');}
+#slide-1-livingLiterature .bcg {background-image:url('../img/bcg_slide-1-livingLiterature.jpg');}
+#slide-1-unschooling .bcg {background-image:url('../img/bcg_slide-1-unschooling.jpg');}
+#slide-1-waldorf .bcg {background-image:url('../img/bcg_slide-1-waldorf.jpg');}
+#slide-1-unitStudy .hsContent, #slide-1-montessori .hsContent, #slide-1-livingLiterature .hsContent, #slide-1-traditionalTextbook .hsContent, #slide-1-unschooling .hsContent, #slide-1-waldorf .hsContent, #slide-1-engage .hsContent, #slide-1-connect .hsContent, #slide-1-grossMotor .hsContent {
+    margin-left: -339px;
+    top: 75px;
+}
+#slide-1-unitStudy h2, #slide-1-montessori h2, #slide-1-livingLiterature h2, #slide-1-traditionalTextbook h2, #slide-1-unschooling h2, #slide-1-waldorf h2, #slide-1-engage h2 {color: white;}
+
+#slide-2-literacy .bcg {background-image:url('../img/bcg_slide-2-literacy.jpg');}
+#slide-2-logic .bcg {background-image:url('../img/bcg_slide-2-logic.jpg');}
+#slide-2-art .bcg {background-image:url('../img/bcg_slide-2-art.jpg');}
+#slide-2-science .bcg {background-image:url('../img/bcg_slide-2-science.jpg');}
+#slide-2-math .bcg {background-image:url('../img/bcg_slide-5-traditionalTextbook.jpg');}
+#slide-2-grossMotor .bcg {background-image:url('../img/bcg_slide-2-grossMotor.jpg');}
+#slide-2-fineMotor .bcg {background-image:url('../img/bcg_slide-2-fineMotor.jpeg');}
+#slide-2-engage .bcg {background-image:url('../img/bcg_slide-2-engage.jpg');}
+#slide-2-unitStudy .bcg {background-image:url('../img/bcg_slide-2-unitStudy.jpg');}
+#slide-2-montessori .bcg {background-image:url('../img/bcg_slide-2-montessori.jpg');}
+#slide-2-traditionalTextbook .bcg {background-image:url('../img/bcg_slide-2-traditionalTextbook.png');}
+#slide-2-livingLiterature .bcg {background-image:url('../img/bcg_slide-2-livingLiterature.jpg');}
+#slide-2-unschooling .bcg {background-image:url('../img/bcg_slide-2-unschooling.jpg');}
+#slide-2-waldorf .bcg {background-image:url('../img/bcg_slide-2-waldorf-2.jpg');}
+#slide-2-unitStudy .hsContent, #slide-2-montessori .hsContent, #slide-2-livingLiterature .hsContent, #slide-2-traditionalTextbook .hsContent, #slide-2-unschooling .hsContent, #slide-2-waldorf .hsContent, #slide-2-engage .hsContent, #slide-2-fineMotor .hsContent, #slide-2-grossMotor .hsContent {
+	margin-left: -239px;
+}
+#slide-2-unitStudy h2, #slide-2-montessori h2, #slide-2-livingLiterature h2, #slide-2-traditionalTextbook h2, #slide-2-unschooling h2, #slide-2-waldorf h2, #slide-2-engage h2 {color: white;}
+
+#slide-3-literacy .bcg {background-image:url('../img/bcg_slide-3-literacy.jpg');}
+#slide-3-logic .bcg {background-image:url('../img/bcg_slide-3-logic.jpg');}
+#slide-3-art .bcg {background-image:url('../img/bcg_slide-3-art.jpg');}
+#slide-3-science .bcg {background-image:url('../img/bcg_slide-3-science.jpg');}
+#slide-3-math .bcg {background-image:url('../img/bcg_slide-3-math.jpg');}
+#slide-3-grossMotor .bcg {background-image:url('../img/bcg_slide-3-grossMotor.jpg');}
+#slide-3-fineMotor .bcg {background-image:url('../img/bcg_slide-3-fineMotor.jpg');}
+#slide-3-engage .bcg {background-image:url('../img/bcg_slide-3-engage.jpg');}
+#slide-3-unitStudy .bcg {background-image:url('../img/bcg_slide-3-unitStudy.jpg');}
+#slide-3-montessori .bcg {background-image:url('../img/bcg_slide-3-montessori.jpg');}
+#slide-3-traditionalTextbook .bcg {background-image:url('../img/bcg_slide-3-traditionalTextbook.png');}
+#slide-3-livingLiterature .bcg {background-image:url('../img/bcg_slide-3-livingLiterature.jpg');}
+#slide-3-unschooling .bcg {background-image:url('../img/bcg_slide-3-unschooling.jpg');}
+#slide-3-waldorf .bcg {background-image:url('../img/bcg_slide-3-waldorf.jpg');}
+#slide-3-unitStudy .hsContent, #slide-3-montessori .hsContent, #slide-3-livingLiterature .hsContent, #slide-3-traditionalTextbook .hsContent, #slide-3-unschooling .hsContent, #slide-3-waldorf .hsContent, #slide-3-engage .hsContent, #slide-3-fineMotor .hsContent, #slide-3-grossMotor .hsContent {
+	margin-left: -239px;
+}
+#slide-3-unitStudy h2, #slide-3-montessori h2, #slide-3-livingLiterature h2, #slide-3-traditionalTextbook h2, #slide-3-unschooling h2, #slide-3-waldorf h2, #slide-3-engage h2 {color: white;}
+
+#slide-4-unitStudy .bcg {background-image:url('../img/bcg_slide-4-unitStudy.jpg');}
+#slide-4-montessori .bcg {background-image:url('../img/bcg_slide-4-montessori.jpg');}
+#slide-4-traditionalTextbook .bcg {background-image:url('../img/bcg_slide-4-traditionalTextbook.jpg');}
+#slide-4-livingLiterature .bcg {background-image:url('../img/bcg_slide-4-livingLiterature.jpg');}
+#slide-4-unschooling .bcg {background-image:url('../img/bcg_slide-4-unschooling.jpg');}
+#slide-4-waldorf .bcg {background-image:url('../img/bcg_slide-4-waldorf-2.jpg');}
+#slide-4-unitStudy .hsContent, #slide-4-montessori .hsContent, #slide-4-livingLiterature .hsContent, #slide-4-traditionalTextbook .hsContent, #slide-4-unschooling .hsContent, #slide-4-waldorf .hsContent {
+    margin-left: -239px;
+}
+#slide-4-unitStudy h2, #slide-4-montessori h2, #slide-4-livingLiterature h2, #slide-4-traditionalTextbook h2, #slide-4-unschooling h2, #slide-4-waldorf h2 {color: white;}
+
+#slide-5-unitStudy .bcg {background-image:url('../img/bcg_slide-5-unitStudy.jpg');}
+#slide-5-montessori .bcg {background-image:url('../img/bcg_slide-5-montessori.jpg');}
+#slide-5-traditionalTextbook .bcg {background-image:url('../img/bcg_slide-5-traditionalTextbook.jpg');}
+#slide-5-livingLiterature .bcg {background-image:url('../img/bcg_slide-5-livingLiterature.jpg');}
+#slide-5-unschooling .bcg {background-image:url('../img/bcg_slide-5-unschooling.jpg');}
+#slide-5-waldorf .bcg {background-image:url('../img/bcg_slide-5-waldorf.jpg');}
+#slide-5-unitStudy .hsContent, #slide-5-montessori .hsContent, #slide-5-livingLiterature .hsContent, #slide-5-traditionalTextbook .hsContent, #slide-5-unschooling .hsContent, #slide-5-waldorf .hsContent {
+    margin-left: -239px;
+}
+#slide-5-unitStudy h2, #slide-5-montessori h2, #slide-5-livingLiterature h2, #slide-5-traditionalTextbook h2, #slide-5-unschooling h2, #slide-5-waldorf h2 {color: white;}
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
