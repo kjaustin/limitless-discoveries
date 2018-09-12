@@ -44,30 +44,18 @@ $( document ).ready(function() {
     });
 
     $("#message-submit").on("click", function() {
-        // $.ajax({
-        //     type: "POST",
-        //     dataType: "json",
-        //     url: "/send",
-        //     data: {
-        //         email: $("#InputEmail2").val(),
-        //         firstName: $("#InputFirstName2").val(),
-        //         message: $("#FormControlTextarea2").val()
-        //     }
-        // })
-        // .done(function(data) {
-        //     var sgMail = require('@sendgrid/mail');
-        //     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-        //     var msg = {
-        //         to: 'kjuliaaustin@gmail.com',
-        //         from: data.email,
-        //         subject: 'Website Inquiry',
-        //         text: data.message,
-        //         html: '<p>' + data.message + '</p><br>' + '<p>' + data.firstName,
-        //     };
-        //     sgMail.send(msg);
-
-        $.getJSON("/api/inquiry/", function(data) {
-            console.log("Message added to database and sent: " + data);
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/send",
+            data: {
+                email: $("#InputEmail2").val(),
+                firstName: $("#InputFirstName2").val(),
+                message: $("#FormControlTextarea2").val()
+            }
+        })
+        .done(function(data) {
+            console.log("Message added to database and sent.");
             $("#message-form").css("display", "none");
             $("#message-submit").css("display", "none");
             $("#message-submitted").html("Your email has been sent. Please allow up to 24 hours for a response. Thank you.");
