@@ -25,7 +25,18 @@ $( document ).ready(function() {
             }
         })
         .done(function(data) {
-            console.log("Email added to database");
+            const sgMail = require('@sendgrid/mail');
+            sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+            const msg = {
+                to: data.email,
+                from: "kjuliaaustin@gmail.com",
+                subject: 'Engage Program',
+                text: "Engage",
+                html: "<p></p><br><p>Love,</p><p>Katharina</p>",
+            };
+            sgMail.send(msg);
+
+            console.log("Email added to database. Program description sent out.");
             $("#engage-form").css("display", "none");
             $("#submit-waitList").css("display", "none");
             $("#engage-form-submitted").html("An email has been sent with more information to the following email address: " + data.email);
@@ -44,7 +55,18 @@ $( document ).ready(function() {
             }
         })
         .done(function(data) {
-            console.log("Message added to database");
+            const sgMail = require('@sendgrid/mail');
+            sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+            const msg = {
+                to: 'kjuliaaustin@gmail.com',
+                from: data.email,
+                subject: 'Website Inquiry',
+                text: data.message,
+                html: '<p>' + data.message + '</p><br>' + '<p>' + data.firstName,
+            };
+            sgMail.send(msg);
+
+            console.log("Message added to database and sent.");
             $("#message-form").css("display", "none");
             $("#message-submit").css("display", "none");
             $("#message-submitted").html("Your email has been sent. Please allow up to 24 hours for a response. Thank you.");
