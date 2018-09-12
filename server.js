@@ -4,7 +4,7 @@ var router = express.Router();
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var collections = ["contacts", "messages"];
-var uri = 'mongodb://kjuliaaustin@gmail.com:Adeline4201@ds155292.mlab.com:55292/discoveries';
+var uri = 'mongodb://kaustin:203980kj@ds155292.mlab.com:55292/discoveries';
 
 var PORT = process.env.PORT || 3000;
 
