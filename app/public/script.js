@@ -25,11 +25,11 @@ $( document ).ready(function() {
             }
         })
         .done(function(data) {
-            const sgMail = require('@sendgrid/mail');
+            var sgMail = require('@sendgrid/mail');
             sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-            const msg = {
+            var msg = {
                 to: data.email,
-                from: "kjuliaaustin@gmail.com",
+                from: "support@limitlessdiscoveries.com",
                 subject: 'Engage Program',
                 text: "Engage",
                 html: "<p></p><br><p>Love,</p><p>Katharina</p>",
@@ -44,29 +44,30 @@ $( document ).ready(function() {
     });
 
     $("#message-submit").on("click", function() {
-        $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: "/send",
-            data: {
-                email: $("#InputEmail2").val(),
-                firstName: $("#InputFirstName2").val(),
-                message: $("#FormControlTextarea2").val()
-            }
-        })
-        .done(function(data) {
-            const sgMail = require('@sendgrid/mail');
-            sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-            const msg = {
-                to: 'kjuliaaustin@gmail.com',
-                from: data.email,
-                subject: 'Website Inquiry',
-                text: data.message,
-                html: '<p>' + data.message + '</p><br>' + '<p>' + data.firstName,
-            };
-            sgMail.send(msg);
+        // $.ajax({
+        //     type: "POST",
+        //     dataType: "json",
+        //     url: "/send",
+        //     data: {
+        //         email: $("#InputEmail2").val(),
+        //         firstName: $("#InputFirstName2").val(),
+        //         message: $("#FormControlTextarea2").val()
+        //     }
+        // })
+        // .done(function(data) {
+        //     var sgMail = require('@sendgrid/mail');
+        //     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        //     var msg = {
+        //         to: 'kjuliaaustin@gmail.com',
+        //         from: data.email,
+        //         subject: 'Website Inquiry',
+        //         text: data.message,
+        //         html: '<p>' + data.message + '</p><br>' + '<p>' + data.firstName,
+        //     };
+        //     sgMail.send(msg);
 
-            console.log("Message added to database and sent.");
+        $.getJSON("/api/inquiry/", function(data) {
+            console.log("Message added to database and sent: " + data);
             $("#message-form").css("display", "none");
             $("#message-submit").css("display", "none");
             $("#message-submitted").html("Your email has been sent. Please allow up to 24 hours for a response. Thank you.");
