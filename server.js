@@ -5,6 +5,7 @@ var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var collections = ["contacts", "messages"];
 var uri = 'mongodb://kaustin:203980kj@ds155292.mlab.com:55292/discoveries';
+var uri = process.env.MONGOLAB_URI;
 
 var PORT = process.env.PORT || 3000;
 
@@ -16,17 +17,17 @@ app.use('/', require('./app/routing/html-routes.js'));
 
 app.use('/api', require('./app/routing/api-routes.js'));
 
-app.post('/submit', function(req, res) {
-    // console.log(req.body);
-    // db.contacts.insert(req.body, function(err, saved) {
-    //     if (err) {
-    //         console.log(err);
-    //     }
-    //     else {
-    //         res.json(saved);
-    //     }
-    // });
-});
+// app.post('/submit', function(req, res) {
+//     // console.log(req.body);
+//     // db.contacts.insert(req.body, function(err, saved) {
+//     //     if (err) {
+//     //         console.log(err);
+//     //     }
+//     //     else {
+//     //         res.json(saved);
+//     //     }
+//     // });
+// });
 
 app.post('/send', function(req, res) {
     console.log(req.body);
