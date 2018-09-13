@@ -620,14 +620,7 @@ section.ok{
 
 .category-box:hover {
   background-color: #FA8072;
-  height: 100%;
   cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  .category-box:hover {
-    height: 200px;
-  }
 }
 
 .category-box-play {

@@ -12,6 +12,8 @@ $(window).scroll(function () {
 
 $( document ).ready(function() {
 
+    var boxHeight = $(".category-box").height();
+    $(".category-overlay").height(boxHeight);
 
     $("#submit-waitList").on("click", function() {
         $.ajax({
