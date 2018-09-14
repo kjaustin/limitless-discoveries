@@ -55,7 +55,7 @@
           <a class="nav-link" href="/shop">SHOP</a>
         </li>
         <li><i class="nav-item fab fa-youtube fa-fw my-icon align-bottom" style="margin-top: 12px"></i></li>
-        <li><i class="nav-item fas fa-envelope fa-fw my-icon align-bottom" style="margin-top: 12px"></i></li>
+        <li><i class="nav-item fas fa-envelope fa-fw my-icon align-bottom" data-toggle="modal" data-target="#emailModal" style="margin-top: 12px"></i></li>
         <li><i class="nav-item fas fa-search fa-fw my-icon align-bottom" style="margin-top: 12px"></i></li>
       </ul>
     </div>
@@ -234,6 +234,41 @@
         </div>
       </div>
   </div>
+   <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title lato" id="exampleModalLabel">Do you have any questions, concerns, comments, or requests? Please let me know down below.</h3>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="message-form" action="mailto:kjuliaaustin@gmail.com" method="post" enctype="text/plain">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1" class="roboto">Email address</label>
+                              <input type="email" class="form-control roboto" id="InputEmail2" aria-describedby="emailHelp" placeholder="Enter email">
+                              <small id="emailHelp" class="form-text text-muted roboto">We'll never share your email with anyone else.</small>
+                            </div>
+                              <div class="form-group">
+                                <label for="exampleInputFirstName1" class="roboto">First Name</label>
+                                <input type="firstName" class="form-control roboto" id="InputFirstName2" placeholder="First Name">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Message</label>
+                                <textarea class="form-control" id="FormControlTextarea2" rows="4" onkeyup="countChar(this)"></textarea>
+                                <small class="form-text text-muted roboto">Characters Remaining: <span id="charNum">500</span></small>
+                              </div>
+                          </form>
+                          <p id="message-submitted"></p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary roboto" data-dismiss="modal">Close</button>
+                          <button id="message-submit" type="button" class="btn btn-primary roboto">Send</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
     <div class="footer">
         <div class="container">
           <div id="logo-small-footer">

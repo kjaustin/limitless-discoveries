@@ -1,3 +1,11 @@
+.modal-open {
+  padding-right: 0 !important;
+}
+
+html {
+  overflow-y: scroll !important;
+}  
+  
   .running-page-header {
     font-size: 35px !important;
     font-family: 'Lato', sans-serif;
