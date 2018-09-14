@@ -81,7 +81,6 @@ h2 {
 	background: url('../img/ico_loading.gif') no-repeat center center;
 }
 section {
-	min-width: 960px;
 	opacity: 0;
 }
 .loaded section,
@@ -160,8 +159,8 @@ main {
 #slide-1-livingLiterature .bcg {background-image:url('../img/bcg_slide-1-livingLiterature.jpg');}
 #slide-1-unschooling .bcg {background-image:url('../img/bcg_slide-1-unschooling.jpg');}
 #slide-1-waldorf .bcg {background-image:url('../img/bcg_slide-1-waldorf.jpg');}
-#slide-1-unitStudy .hsContent, #slide-1-montessori .hsContent, #slide-1-livingLiterature .hsContent, #slide-1-traditionalTextbook .hsContent, #slide-1-unschooling .hsContent, #slide-1-waldorf .hsContent, #slide-1-engage .hsContent, #slide-1-connect .hsContent, #slide-1-grossMotor .hsContent {
-    margin-left: -339px;
+#slide-1-unitStudy .hsContent, #slide-1-montessori .hsContent, #slide-1-livingLiterature .hsContent, #slide-1-traditionalTextbook .hsContent, #slide-1-unschooling .hsContent, #slide-1-waldorf .hsContent, #slide-1-engage .hsContent, #slide-1-connect .hsContent, #slide-1-grossMotor .hsContent, #slide-1-home .hsContent {
+    left: 20%;
     top: 75px;
 }
 #slide-1-unitStudy h2, #slide-1-montessori h2, #slide-1-livingLiterature h2, #slide-1-traditionalTextbook h2, #slide-1-unschooling h2, #slide-1-waldorf h2, #slide-1-engage h2 {color: white;}
@@ -181,7 +180,7 @@ main {
 #slide-2-unschooling .bcg {background-image:url('../img/bcg_slide-2-unschooling.jpg');}
 #slide-2-waldorf .bcg {background-image:url('../img/bcg_slide-2-waldorf-2.jpg');}
 #slide-2-unitStudy .hsContent, #slide-2-montessori .hsContent, #slide-2-livingLiterature .hsContent, #slide-2-traditionalTextbook .hsContent, #slide-2-unschooling .hsContent, #slide-2-waldorf .hsContent, #slide-2-engage .hsContent, #slide-2-fineMotor .hsContent, #slide-2-grossMotor .hsContent {
-	margin-left: -239px;
+    left: 20%;
 }
 #slide-2-unitStudy h2, #slide-2-montessori h2, #slide-2-livingLiterature h2, #slide-2-traditionalTextbook h2, #slide-2-unschooling h2, #slide-2-waldorf h2, #slide-2-engage h2 {color: white;}
 
@@ -200,7 +199,7 @@ main {
 #slide-3-unschooling .bcg {background-image:url('../img/bcg_slide-3-unschooling.jpg');}
 #slide-3-waldorf .bcg {background-image:url('../img/bcg_slide-3-waldorf.jpg');}
 #slide-3-unitStudy .hsContent, #slide-3-montessori .hsContent, #slide-3-livingLiterature .hsContent, #slide-3-traditionalTextbook .hsContent, #slide-3-unschooling .hsContent, #slide-3-waldorf .hsContent, #slide-3-engage .hsContent, #slide-3-fineMotor .hsContent, #slide-3-grossMotor .hsContent {
-	margin-left: -239px;
+    left: 20%;
 }
 #slide-3-unitStudy h2, #slide-3-montessori h2, #slide-3-livingLiterature h2, #slide-3-traditionalTextbook h2, #slide-3-unschooling h2, #slide-3-waldorf h2, #slide-3-engage h2 {color: white;}
 
@@ -211,7 +210,7 @@ main {
 #slide-4-unschooling .bcg {background-image:url('../img/bcg_slide-4-unschooling.jpg');}
 #slide-4-waldorf .bcg {background-image:url('../img/bcg_slide-4-waldorf-2.jpg');}
 #slide-4-unitStudy .hsContent, #slide-4-montessori .hsContent, #slide-4-livingLiterature .hsContent, #slide-4-traditionalTextbook .hsContent, #slide-4-unschooling .hsContent, #slide-4-waldorf .hsContent {
-    margin-left: -239px;
+    left: 20%;
 }
 #slide-4-unitStudy h2, #slide-4-montessori h2, #slide-4-livingLiterature h2, #slide-4-traditionalTextbook h2, #slide-4-unschooling h2, #slide-4-waldorf h2 {color: white;}
 
@@ -222,7 +221,7 @@ main {
 #slide-5-unschooling .bcg {background-image:url('../img/bcg_slide-5-unschooling.jpg');}
 #slide-5-waldorf .bcg {background-image:url('../img/bcg_slide-5-waldorf.jpg');}
 #slide-5-unitStudy .hsContent, #slide-5-montessori .hsContent, #slide-5-livingLiterature .hsContent, #slide-5-traditionalTextbook .hsContent, #slide-5-unschooling .hsContent, #slide-5-waldorf .hsContent {
-    margin-left: -239px;
+    left: 20%;
 }
 #slide-5-unitStudy h2, #slide-5-montessori h2, #slide-5-livingLiterature h2, #slide-5-traditionalTextbook h2, #slide-5-unschooling h2, #slide-5-waldorf h2 {color: white;}
 

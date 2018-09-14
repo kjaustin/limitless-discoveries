@@ -186,11 +186,11 @@
     background: #f2f2f2;
   }
   #logo-large {
-    position: absolute;
+    /*position: absolute;
     top: 45%;
     left: 30%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     display: block;
     margin-top: 35px;
 
@@ -210,11 +210,11 @@
 }
 
   #logo-large-home {
-    position: absolute;
+    /*position: absolute;
     top: 0;
     left: 0;
     -ms-transform: translate(-100%, -50%);
-    transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);*/
     display: block;
 
     -webkit-animation: fadeInFromNone 4.0s ease-out;
@@ -1105,4 +1105,8 @@ section.ok{
 
 #popup-box input {
   font-family: Lato;
+}
+
+.image-moving-element {
+  z-index: 1;
 }
