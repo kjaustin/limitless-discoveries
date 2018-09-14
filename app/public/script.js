@@ -28,11 +28,16 @@ $( document ).ready(function() {
         $("button[name=subscribe]").click(() => {
             $.ajax({
                 type: "POST",
-                url: $("#popup-form").attr("action"),
-                data: $("#popup-form").serialize(),
-                success: (data) => {
-                    $("#popup-box-content").html("<p style='text-align: center'>Thank you for subscribing to The Limitless Discoveries newsletter!</p>");
+                url: "/submit",
+                data: {
+                    email: $("#NewsletterEmailAddress").val(),
+                    firstName: $("#NewsletterFirstName").val(),
+                    type: "newsletter"
                 }
+            })
+            .done(function(data) {
+                console.log("Email added to database. Newsletter sent out.");
+                $("#popup-box-content").html("<p style='text-align: center'>Thank you for subscribing to The Limitless Discoveries newsletter!</p>");
             });
         });
 
@@ -40,7 +45,7 @@ $( document ).ready(function() {
             $("#list-builder, #popup-box").hide();
             localStorage.setItem("list-builder", (new Date()).getTime());
         });
-    }
+    };
 
     var boxHeight = $(".category-box").height();
     $( ".category-box" ).hover(function() {
@@ -59,17 +64,6 @@ $( document ).ready(function() {
             }
         })
         .done(function(data) {
-            var sgMail = require('@sendgrid/mail');
-            sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-            var msg = {
-                to: data.email,
-                from: "support@limitlessdiscoveries.com",
-                subject: 'Engage Program',
-                text: "Engage",
-                html: "<p></p><br><p>Love,</p><p>Katharina</p>",
-            };
-            sgMail.send(msg);
-
             console.log("Email added to database. Program description sent out.");
             $("#engage-form").css("display", "none");
             $("#submit-waitList").css("display", "none");
