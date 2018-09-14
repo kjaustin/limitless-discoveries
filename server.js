@@ -1,18 +1,16 @@
-require('dotenv').load();
+require('dotenv').config({path: __dirname + '/.env'})
 var express = require('express');
 var app = express();
 var router = express.Router();
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var collections = ["contacts", "messages"];
-var uri = process.env.MONGOLAB_URI;
+var uri = 'mongodb://kaustin:203980kj@ds155292.mlab.com:55292/heroku_1qqgzp9h';
 
 var PORT = process.env.PORT || 3000;
 
 var sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-console.log('Now the value for FOO is:', process.env.MONGOLAB_URI);
+sgMail.setApiKey('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');
 
 app.use(express.static(__dirname + '/app/public'));
 app.use('/', require('./app/routing/html-routes.js'));
