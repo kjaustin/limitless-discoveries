@@ -67,7 +67,7 @@ app.use('/send', function(req, res) {
     });
 
     var msg = {
-        to: 'support@limitlessdiscoveries.com',
+        to: 'kjuliaaustin@gmail.com',
         from: req.body.email,
         subject: 'Website Inquiry',
         text: req.body.message,
