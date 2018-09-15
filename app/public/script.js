@@ -170,50 +170,6 @@ $( document ).ready(function() {
         $(this).find(".icon-activity").hide();
     });
 
-    $('.age2-button').click(function () {
-        $('.modal-body').find(".age2").show();
-        $('.modal-body').find(".age5").hide();
-        $('.modal-body').find(".age9").hide();
-        $('.modal-body').find(".age13").hide();
-        $(this).css('color', '#FA8072');
-        $('.age5-button').css('color', 'black');
-        $('.age9-button').css('color', 'black');
-        $('.age13-button').css('color', 'black');
-    });
-
-    $('.age5-button').click(function () {
-        $('.modal-body').find(".age5").show();
-        $('.modal-body').find(".age2").hide();
-        $('.modal-body').find(".age9").hide();
-        $('.modal-body').find(".age13").hide();
-        $(this).css('color', '#FA8072');
-        $('.age2-button').css('color', 'black');
-        $('.age9-button').css('color', 'black');
-        $('.age13-button').css('color', 'black');
-    });
-
-    $('.age9-button').click(function () {
-        $('.modal-body').find(".age9").show();
-        $('.modal-body').find(".age2").hide();
-        $('.modal-body').find(".age5").hide();
-        $('.modal-body').find(".age13").hide();
-        $(this).css('color', '#FA8072');
-        $('.age5-button').css('color', 'black');
-        $('.age2-button').css('color', 'black');
-        $('.age13-button').css('color', 'black');
-    });
-
-    $('.age13-button').click(function () {
-        $('.modal-body').find(".age13").show();
-        $('.modal-body').find(".age2").hide();
-        $('.modal-body').find(".age5").hide();
-        $('.modal-body').find(".age9").hide();
-        $(this).css('color', '#FA8072');
-        $('.age5-button').css('color', 'black');
-        $('.age9-button').css('color', 'black');
-        $('.age2-button').css('color', 'black');
-    });
-
     $('#exampleModal').modal({ show: false});
 
     var s = skrollr.init({

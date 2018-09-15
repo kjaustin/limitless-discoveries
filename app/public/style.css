@@ -420,11 +420,18 @@ html {
 }
 
 section {
-  height: 100vh;
   width: 100%;
   display: table;
-  
 }
+
+.per-section {
+  height: 100% !important;
+}
+
+.vh-section {
+  height: 100vh !important;
+}
+
 section.ok{
   background-color: #f2f2f2;
 }
@@ -922,7 +929,7 @@ section.ok{
   color: white;
   position: absolute;
   bottom: 25%;
-  left: 250px;
+  left: 50%;
 }
 
 .sidenav {
@@ -1117,4 +1124,8 @@ section.ok{
 
 .image-moving-element {
   z-index: 1;
+}
+
+.contain-text {
+  overflow: hidden;
 }
