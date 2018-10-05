@@ -264,6 +264,18 @@ html {
     -o-animation: fadeInFromNone 4.0s ease-in;
     animation: fadeInFromNone 4.0s ease-in;
   }
+
+  #login-form {
+    position: absolute;
+    top:30%;
+    right: 0;
+    left: 0;
+  }
+
+    #logo-small-news {
+    margin-top: 35px;
+    display: block;
+  }
   @-webkit-keyframes fadeInFromNone {
     0% {
         display: none;
@@ -426,6 +438,17 @@ section {
 
 .per-section {
   height: 100% !important;
+}
+
+.engage-home-image {
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  padding: 10px;
+}
+
+.engage-home-container:hover .engage-home-image {
+  opacity: 0.3;
 }
 
 .vh-section {

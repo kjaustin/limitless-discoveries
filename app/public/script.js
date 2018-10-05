@@ -12,7 +12,7 @@ $(window).scroll(function () {
 
 $( document ).ready(function() {
 
-    var delay = 300; // milliseconds
+    var delay = 5000; // milliseconds
     var cookie_expire = 0; // days
 
     var cookie = localStorage.getItem("list-builder");
@@ -48,15 +48,31 @@ $( document ).ready(function() {
     };
 
     var boxHeight = $(".category-box").height();
-    $( ".category-box" ).hover(function() {
+    $(".category-box").hover(function() {
         $(this).height(boxHeight);
+    });
+
+    $("#view-newsletter").on("click", function() {
+        var title = $("#TitleFormControlInput1").val();
+        var content = $("#NewsletterFormControlTextarea1").val();
+
+        $("#newsletter-form-title").html(title);
+        $("#newsletter-form-paragraph").html(content);
+
+        $('#newsletter-form-title').each(function(){
+            var text = $(this).text().split(' ');
+            if(text.length < 2)
+                return;
+            text[1] = '<span class="orange-cursive" style="font-size: 40px;">'+text[1]+'</span>';
+            $(this).html( text.join(' ') );
+        });
     });
 
     $("#submit-waitList").on("click", function() {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "/submit",
+            url: "/api/submit",
             data: {
                 email: $("#InputEmail1").val(),
                 firstName: $("#InputFirstName1").val(),
@@ -71,11 +87,54 @@ $( document ).ready(function() {
         });
     });
 
+    $("#new-newsletter").on("click", function() {
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/api/save-newsletter",
+            data: {
+                title: $("#TitleFormControlInput1").val(),
+                newsletterType: $("#NewsletterTypeFormControlSelect1").val(),
+                sendDate: $("#SendDateFormControlInput1").val(),
+                sendTime: $("#SendTimeFormControlInput1").val(),
+                content:  "<div id='logo-small-news'><h1 id='logo-font-small-h1'>LIMITLESS</h1><h2 id='logo-font-small-h2'>Discoveries</h2></div><br><h2 id='newsletter-form-title' class='text-center lato'>TITLE</h2><svg height='20' width='500'><line x1='150' y1='0' x2='400' y2='0' style='stroke:#FA8072;stroke-width:4' /></svg>" + $("#NewsletterFormControlTextarea1").val() + "<br><p class='roboto' style='line-height: 0px;'>Love,</p><h1 class='orange-cursive' style='font-size: 50px; line-height: 5px;'>Kat</h1><p class='lato'>Inspire Limitless Discoveries</p><p id='newsletter-form-outro' class='roboto'></p>"
+            }
+        })
+        .done(function(data) {
+            console.log("Newsletter added to database.");
+        });
+    });
+
+    $("#adminLoginButton").on("click", function() {
+        $.ajax({
+            type: "POST",
+            url: "/api/signin",
+            data: {
+                username: $("#AdminUsernameFormControlInput1").val(),
+                password: $("#AdminPasswordFormControlInput1").val(),
+                type: "admin"
+            }
+        }).done(function(data) {
+            console.log("You are signed in. Server available.");
+            window.location.href = "/admin-home";
+        }).fail(function()  {
+            console.log("Sorry. Server unavailable.");
+        }); 
+    });
+
+    $("#getUpcomingNewsletters").on("click", function() {
+        $.getJSON("/api/return-newsletter", function(data) {
+            for(var i = 0; i < data.length; i++) {
+                $("#upcomingNewsletterButton").append("<div class='row'><div class='col-md-12'><h2>" + data[i].title + "</h2><p>" + data[i].sendDate + "</p><button type=button class='btn btn-primary'>View</button><button type=button class='btn btn-secondary'>Send</button></div></div>");
+            }
+        }); 
+    });
+
     $("#message-submit").on("click", function() {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "/send",
+            url: "/api/send",
             data: {
                 email: $("#InputEmail2").val(),
                 firstName: $("#InputFirstName2").val(),

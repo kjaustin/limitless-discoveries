@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/fields.png">
+    <title>Limitless Discoveries</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="../learn/curriculum/css/normalize.css">
+    <link rel="stylesheet" href="../learn/curriculum/css/main.css">
+    <script src="../learn/curriculum/js/vendor/modernizr-2.7.1.min.js"></script>
+    <style type="text/css"></style>
+  </head>
+  <body style="background-color: rgb(242,242,242); background: rgb(242,242,242)">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <a href="/admin-home">WRITE NEWSLETTER</a>
+      <a href="/admin-send">SEND NEWSLETTER</a>
+      <a href="/admin-statistics">STATISTICS</a>
+    </div>
+    <div id="logo-small">
+      <h1 id="logo-font-small-h1">LIMITLESS</h1>
+      <h2 id="logo-font-small-h2">Discoveries</h2>
+    </div>
+    <div class="container" style="margin-top: 25px">
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto text-right navbar-center">
+        <li class="nav-item active">
+            <a class="nav-link" href="/admin-home">WRITE NEWSLETTER</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/admin-send">SEND NEWSLETTER</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/admin-statistics">STATISTICS</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  <div class="container" style="margin-top: 50px;">
+      <div class="row">
+          <div class="col-md-6">
+            <form>
+            <div class="form-group">
+                <label for="TitleFormControlInput1">Title</label>
+                <input type="title" class="form-control" id="TitleFormControlInput1" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="NewsletterTypeFormControlSelect1">Newsletter Type</label>
+                <select class="form-control" id="NewsletterTypeFormControlSelect1">
+                <option>Email Newsletter</option>
+                <option>Engage Newsletter</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                    <label for="SendDateFormControlInput1">Send Date</label>
+                    <input class="form-control" id="SendDateFormControlInput1">
+                </div>
+                <div class="col-md-6">
+                    <label for="SendTimeFormControlInput1">Send Time</label>
+                    <input class="form-control" id="SendTimeFormControlInput1">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="NewsletterFormControlTextarea1">Content</label>
+                <textarea class="form-control" id="NewsletterFormControlTextarea1" rows="20"></textarea>
+            </div>
+
+            <button id="view-newsletter" type="button" class="btn btn-secondary">VIEW</button>
+            <button id="new-newsletter" type="button" class="btn btn-primary">SAVE</button>
+          </div>
+          <div class="col-md-6" style="background-color: white;">
+            <div id="logo-small-news">
+                <h1 id="logo-font-small-h1">LIMITLESS</h1>
+                <h2 id="logo-font-small-h2">Discoveries</h2>
+            </div>
+            <br>
+            <h2 id="newsletter-form-title" class="text-center lato">TITLE</h2>
+            <svg height="20" width="500">
+              <line x1="150" y1="0" x2="400" y2="0" style="stroke:#FA8072;stroke-width:4" />
+            </svg>
+            <div id="newsletter-form-paragraph" class="roboto"></div>
+            <br>
+            <p class="roboto" style="line-height: 0px;">Love,</p>
+            <h1 class="orange-cursive" style="font-size: 50px; line-height: 5px;">Kat</h1>
+            <p class="lato">Inspire Limitless Discoveries</p>
+            <p id="newsletter-form-outro" class="roboto"></p>
+          </div>
+      </div>
+  </div>
+  <br>
+       <script
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="../learn/curriculum/js/imagesloaded.js"></script>
+        <script src="../learn/curriculum/js/skrollr.js"></script>
+        <script src="../learn/curriculum/js/_main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../script.js"></script>
+    <!--<script type="text/javascript" src="vitalets-bootstrap-datepicker-c7af15b/js/bootstrap-datepicker.js" charset="UTF-8"></script>-->
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>

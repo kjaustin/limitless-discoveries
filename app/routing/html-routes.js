@@ -29,6 +29,26 @@ html.get("/engage", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/engage.html"));
 });
 
+html.get("/engage/details", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/engage-details.html"));
+});
+
+html.get("/admin-login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/admin/admin-login.html"));
+});
+
+html.get("/admin-home", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/admin/admin-home.html"));
+});
+
+html.get("/admin-send", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/admin/admin-send.html"));
+});
+
+html.get("/admin-statistics", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/admin/admin-statistics.html"));
+});
+
 html.get("/shop", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/shop.html"));
 });
