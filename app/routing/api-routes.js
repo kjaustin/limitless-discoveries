@@ -101,8 +101,13 @@ api.use(function(req,res,next){
     next()
 });
 
-api.get("/signinRoute", function(req, res){
+api.get("/adminSigninRoute", function(req, res){
     res.sendFile(path.join(__dirname, "../public/admin/admin-home.html"));
+    console.log("Successfully signed in.");
+});
+
+api.get("/engageSigninRoute", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/engage/engage-home.html"));
     console.log("Successfully signed in.");
 });
 
@@ -110,7 +115,11 @@ api.post("/signin", passport.authenticate('local'),
     function(req, res) {
         console.log(req.user.username);
         var currentUser = JSON.stringify(req.user);
-        res.redirect("/api/signinRoute");
+        if (req.user.type == "admin") {
+            res.redirect("/api/adminSigninRoute");
+        } else if (req.user.type == "engage") {
+            res.redirect("/api/engageSigninRoute");
+        }
         return res.end(currentUser);
 });
 
@@ -127,11 +136,16 @@ api.post("/signup", function(req, res, next){
         if(!user){
             User.create({
                 username: req.body.username,
-                password: bCrypt.hashSync(req.body.password)
+                password: bCrypt.hashSync(req.body.password),
+                type: req.body.type
             }).then(function(user){
                 console.log("added to database");
                 passport.authenticate('local'), function(req, res) {
-                    res.redirect("/signupRoute");
+                    if (req.user.type == "admin") {
+                        res.redirect("/api/adminSigninRoute");
+                    } else if (req.user.type == "engage") {
+                        res.redirect("/api/engageSigninRoute");
+                    }
                 }
             })
         } else {

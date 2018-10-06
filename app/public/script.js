@@ -122,6 +122,23 @@ $( document ).ready(function() {
         }); 
     });
 
+    $("#engageLoginButton").on("click", function() {
+        $.ajax({
+            type: "POST",
+            url: "/api/signin",
+            data: {
+                username: $("#EngageUsernameFormControlInput1").val(),
+                password: $("#EngagePasswordFormControlInput1").val(),
+                type: "engage"
+            }
+        }).done(function(data) {
+            console.log("You are signed in. Server available.");
+            window.location.href = "/engage/home";
+        }).fail(function()  {
+            console.log("Sorry. Server unavailable.");
+        }); 
+    });
+
     $("#getUpcomingNewsletters").on("click", function() {
         $.getJSON("/api/return-newsletter", function(data) {
             for(var i = 0; i < data.length; i++) {

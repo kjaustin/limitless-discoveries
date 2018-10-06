@@ -29,6 +29,14 @@ html.get("/engage", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/engage.html"));
 });
 
+html.get("/engage/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/engage-login.html"));
+});
+
+html.get("/engage/home", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/engage-home.html"));
+});
+
 html.get("/engage/details", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/engage/engage-details.html"));
 });
