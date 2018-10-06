@@ -17,6 +17,7 @@
     "cheerio": "^1.0.0-rc.2",
     "dns": "^0.2.2",
     "dotenv": "^6.0.0",
+    "dotenvenc": "^1.0.4",
     "express": "^4.16.3",
     "fs": "0.0.1-security",
     "ipware": "^1.0.0",
@@ -27,5 +28,8 @@
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^4.0.3"
   }
 }

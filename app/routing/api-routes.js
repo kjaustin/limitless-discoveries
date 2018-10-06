@@ -10,7 +10,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var bCrypt = require('bcrypt-nodejs');
 
 var sgMail = require('@sendgrid/mail');
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 var api = express.Router();
 
