@@ -37,8 +37,48 @@ html.get("/engage/home", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/engage/engage-home.html"));
 });
 
+html.get("/engage/payment", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/payment.html"));
+});
+
+html.get("/engage/selection", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/engage-selection.html"));
+});
+
 html.get("/engage/details", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/engage/engage-details.html"));
+});
+
+html.get("/engage/course", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/course/engage-course.html"));
+});
+
+html.get("/engage/community", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/engage-community.html"));
+});
+
+html.get("/engage/preschool", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/engage-preschool.html"));
+});
+
+html.get("/engage/unitstudy", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/engage-unitstudy.html"));
+});
+
+html.get("/engage/consulting", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/engage-consulting.html"));
+});
+
+html.get("/engage/course/curiosity", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/course/engage-curiosity.html"));
+});
+
+html.get("/engage/course/creativity", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/course/engage-creativity.html"));
+});
+
+html.get("/engage/course/confidence", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/engage/course/engage-confidence.html"));
 });
 
 html.get("/admin-login", function(req, res) {
